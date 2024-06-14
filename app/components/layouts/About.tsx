@@ -10,7 +10,7 @@ const About = () => {
         <div className=" sm:relative mx-auto w-[200px] lg:w-[300px] xl:w-[400px]">
           <img
             className="w-[200px] h-[200px] rounded-full sm:absolute sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px]"
-            src="/face.webp"
+            src="/About.webp"
             alt="顔写真"
           />
         </div>

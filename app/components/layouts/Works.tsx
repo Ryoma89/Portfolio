@@ -11,9 +11,9 @@ const Works = () => {
           These are the websites I have developed so far.{" "}
         </p>
         <div className="mt-5 sm:grid sm:grid-cols-3 sm:gap-5 lg:mt-10">
-          <WorkCard />
-          <WorkCard />
-          <WorkCard />
+          <WorkCard url={"https://github.com/Ryoma89/household"}/>
+          <WorkCard url={"https://github.com/Ryoma89/household"}/>
+          <WorkCard url={"https://github.com/Ryoma89/household"}/>
         </div>
       </div>
     </section>
