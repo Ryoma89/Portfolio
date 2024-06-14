@@ -40,8 +40,8 @@ const Contact = () => {
     console.log(values);
   }
   return (
-    <section className="px-10 py-14 md:py-20 xl:py-28" id="Contact">
-      <div className="xl:w-[1280px] xl:mx-auto">
+    <section className="px-10 py-14 md:py-20 xl:py-32" id="Contact">
+      <div className="xl:w-[1000px] xl:mx-auto">
         <Title title="Contact" />
         <div className="mt-10 sm:w-4/5 sm:mx-auto md:w-3/5 xl:mt-16">
           <Form {...form}>

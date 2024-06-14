@@ -3,10 +3,10 @@ import Title from "../elements/Title";
 
 const About = () => {
   return (
-    <section className="px-10 py-14 bg-bgMain md:py-20 xl:py-28" id="About">
-      <div className="xl:w-[1280px] xl:mx-auto">
+    <section className="px-10 py-14 bg-bgMain md:py-20 xl:py-32" id="About">
+      <div className="xl:w-[1000px] xl:mx-auto">
       <Title title="About" />
-      <div className="sm:grid sm:grid-cols-2 mt-10">
+      <div className="sm:grid sm:grid-cols-2 mt-10 xl:mt-16">
         <div className=" sm:relative mx-auto w-[200px] lg:w-[300px] xl:w-[400px]">
           <img
             className="w-[200px] h-[200px] rounded-full sm:absolute sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px]"
