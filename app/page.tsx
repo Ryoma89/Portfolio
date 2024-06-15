@@ -6,6 +6,7 @@ import Contact from "./components/layouts/Contact";
 import Hero from "./components/layouts/Hero";
 import { Separator } from "@/components/ui/separator";
 import Footer from "./components/layouts/Footer";
+import { TypewriterEffect } from "./components/ui/typewriter-effect";
 
 
 export default function Home() {
