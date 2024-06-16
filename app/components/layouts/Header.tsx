@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header className="p-5 fixed w-full bg-white z-50">
-    <div className="flex justify-between items-center xl:w-[1000px] xl:mx-auto">
+    <div className="flex justify-between items-center xl:max-w-[1280px] xl:mx-auto">
       <h1>
         <img src="/Logo.png" alt="Ryoma's Portfolio" className="h-14" />
       </h1>

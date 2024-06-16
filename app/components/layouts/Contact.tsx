@@ -4,7 +4,7 @@ import Title from "../elements/Title";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
+// import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -14,8 +14,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/components/ui/use-toast"
-
+import { useToast } from "@/components/ui/use-toast";
+import { Button } from "../ui/moving-border";
 
 const formSchema = z.object({
   name: z.string().min(2).max(50),
@@ -26,7 +26,7 @@ const formSchema = z.object({
 const googleFormUrl = process.env.NEXT_PUBLIC_GOOGLE_FORM_URL;
 
 const Contact = () => {
-  const { toast } = useToast()
+  const { toast } = useToast();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -39,9 +39,18 @@ const Contact = () => {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     const formData = new FormData();
-    formData.append(`entry.${process.env.NEXT_PUBLIC_NAME_ENTRY_ID}`, values.name);
-    formData.append(`entry.${process.env.NEXT_PUBLIC_EMAIL_ENTRY_ID}`, values.email);
-    formData.append(`entry.${process.env.NEXT_PUBLIC_CONTENT_ENTRY_ID}`, values.content);
+    formData.append(
+      `entry.${process.env.NEXT_PUBLIC_NAME_ENTRY_ID}`,
+      values.name
+    );
+    formData.append(
+      `entry.${process.env.NEXT_PUBLIC_EMAIL_ENTRY_ID}`,
+      values.email
+    );
+    formData.append(
+      `entry.${process.env.NEXT_PUBLIC_CONTENT_ENTRY_ID}`,
+      values.content
+    );
 
     if (!googleFormUrl) {
       console.error("Google Form URL is not defined.");
@@ -52,29 +61,34 @@ const Contact = () => {
       method: "POST",
       body: formData,
       mode: "no-cors",
-    }).then(() => {
-      toast({
-        title: "✅ Success!!",
-        description: "Thank you for your message!!",
+    })
+      .then(() => {
+        toast({
+          title: "✅ Success!!",
+          description: "Thank you for your message!!",
+        });
+        form.reset();
       })
-      form.reset();
-    }).catch((error) => {
-      toast({
-        title: "❌ Failed!!",
-        description: error,
-      })
-      form.reset();
-    });
+      .catch((error) => {
+        toast({
+          title: "❌ Failed!!",
+          description: error,
+        });
+        form.reset();
+      });
   }
-
 
   return (
     <section className="px-10 py-14 md:py-20 xl:py-32" id="Contact">
-      <div className="xl:w-[1000px] xl:mx-auto">
+      <div className="xl:max-w-[1280px] xl:mx-auto">
         <Title title="Contact" />
         <div className="mt-10 sm:w-4/5 sm:mx-auto md:w-3/5 xl:mt-16">
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRQ-NPSU8nrbKrpC45qWqeFdgsPzmxqIbk7jTc9WRH2G1MyQ/formResponse">
+            <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-8"
+              action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfRQ-NPSU8nrbKrpC45qWqeFdgsPzmxqIbk7jTc9WRH2G1MyQ/formResponse"
+            >
               {/* name */}
               <FormField
                 control={form.control}
@@ -127,9 +141,15 @@ const Contact = () => {
                 )}
               />
               <div className="w-[90px] mx-auto sm:w-[110px] lg:w-[150px] xl:w-[250px]">
-                <Button
+                {/* <Button
                   type="submit"
                   className="w-[90px] h-auto bg-blue-500 hover:bg-blue-700 sm:w-[110px] lg:w-[150px] xl:w-[250px] xl:text-xl xl:mt-5 xl:py-2"
+                >
+                  Submit
+                </Button> */}
+                <Button
+                  borderRadius="1.75rem"
+                  className=" dark:bg-slate-900 text-white text-lg font-bold dark:text-white border-neutral-200 dark:border-slate-800 bg-blue-500 hover:bg-blue-700"
                 >
                   Submit
                 </Button>
