@@ -10,6 +10,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Separator } from "@/components/ui/separator"
+import Image from "next/image";
 
 
 const Header = () => {
@@ -27,7 +28,7 @@ const Header = () => {
     <header className="p-5 fixed w-full bg-white z-50">
     <div className="flex justify-between items-center xl:max-w-[1280px] xl:mx-auto">
       <h1>
-        <img src="/Logo.png" alt="Ryoma's Portfolio" className="h-14" />
+        <Image width={212} height={56} src="/Logo.png" alt="Ryoma's Portfolio" className="h-14" />
       </h1>
       <nav>
         <div className="sm:hidden">

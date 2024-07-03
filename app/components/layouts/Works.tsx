@@ -4,6 +4,7 @@ import Title from "../elements/Title";
 import WorkCard from "../elements/work/WorkCard";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
+import { worksData } from "@/constants/worksData";
 
 const Works = () => {
   const { ref, controls, animationVariants } = useScrollAnimation();
@@ -23,9 +24,9 @@ const Works = () => {
           These are the websites I have developed so far.{" "}
         </p>
         <div className="mt-5 sm:grid sm:grid-cols-3 sm:gap-5 lg:mt-10">
-          <WorkCard url={"https://github.com/Ryoma89/household"} />
-          <WorkCard url={"https://github.com/Ryoma89/household"} />
-          <WorkCard url={"https://github.com/Ryoma89/household"} />
+        {worksData.map((work, index) => (
+            <WorkCard key={index} github={work.github} deploy={work.deploy} name={work.name} image={work.image} />
+          ))}
         </div>
       </div>
     </motion.section>

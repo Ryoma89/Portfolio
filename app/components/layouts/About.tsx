@@ -3,6 +3,7 @@ import React from "react";
 import Title from "../elements/Title";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const About = () => {
   const { ref, controls, animationVariants } = useScrollAnimation();
@@ -20,7 +21,9 @@ const About = () => {
         <Title title="About" />
         <div className="sm:grid sm:grid-cols-2 mt-10 xl:mt-16">
           <div className=" sm:relative mx-auto w-[200px] lg:w-[300px] xl:w-[400px]">
-            <img
+            <Image
+            width={200}
+            height={200}
               className="w-[200px] h-[200px] rounded-full sm:absolute sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 bg-white lg:w-[300px] lg:h-[300px] xl:w-[400px] xl:h-[400px]"
               src="/About.webp"
               alt="顔写真"
