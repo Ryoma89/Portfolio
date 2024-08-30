@@ -10,20 +10,20 @@ type Work = {
 export const worksData: Work[] = [
   {
     github: "https://github.com/Ryoma89/Household-Account-Book.git",
-    deploy: "https://household-account-book-three.vercel.app/",
+    deploy: "https://household-account-book-two.vercel.app/",
     name: "MoneyMate",
     image: "/household-account.png",
   },
   {
-    github: "https://github.com/Ryoma89/Household-Account-Book.git",
-    deploy: "https://household-account-book-three.vercel.app/",
-    name: "BattleQuiz",
-    image: "/household-account.png",
+    github: "https://github.com/Ryoma89/EventFlow.git",
+    deploy: "https://eventflow-h7sj.onrender.com",
+    name: "EventFlow",
+    image: "/eventFlow.png",
   },
   {
-    github: "https://github.com/Ryoma89/Household-Account-Book.git",
-    deploy: "https://household-account-book-three.vercel.app/",
-    name: "Event",
-    image: "/household-account.png",
+    github: "https://github.com/Ryoma89/BattleQuiz.git",
+    deploy: "https://battle-quiz-beryl.vercel.app/",
+    name: "Battle Quiz",
+    image: "/battle-quiz.png",
   },
 ];

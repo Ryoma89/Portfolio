@@ -19,7 +19,7 @@ const WorkCard = ({ github, deploy, name, image }: Props) => {
           width={0}
           height={0}
           sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: "100%", height: "200px" }}
           src={image}
           alt="workCard"
         />
