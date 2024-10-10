@@ -16,7 +16,7 @@ export const worksData: Work[] = [
   },
   {
     github: "https://github.com/Ryoma89/EventFlow.git",
-    deploy: "https://eventflow-h7sj.onrender.com",
+    deploy: "event-flow-frontend-wine.vercel.app",
     name: "EventFlow",
     image: "/eventFlow.png",
   },
